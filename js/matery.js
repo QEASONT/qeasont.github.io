@@ -187,3 +187,4 @@ if (localStorage.getItem('isDark') === '1') {
     document.body.classList.remove('DarkMode');
     $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')
 }
+
