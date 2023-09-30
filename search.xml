@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>QT&#39;s Workflow--双链笔记Logseq</title>
+      <link href="/posts/32266.html"/>
+      <url>/posts/32266.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>在QT看来，无论是如今的电子笔记还是高中时期的纸质笔记，它们都仅仅是一种知识的载体或是记忆的媒介，不管形式上发展到如何程度，最重要的还是内容，其最大的功能也仅仅是帮助使用者进行记忆，更高效的掌握知识；换句话说，在<strong>信息来源-笔记-大脑</strong>这一学习的过程中，笔记起到桥梁和纽带的作用，但最重要的还是要确保知识流入🧠。因此，切忌为了追求所谓的体验感与美感，追求华而不实的呈现形式。</p><h2 id="双链笔记Logseq"><a href="#双链笔记Logseq" class="headerlink" title="双链笔记Logseq"></a>双链笔记Logseq</h2><h3 id="什么是双链笔记"><a href="#什么是双链笔记" class="headerlink" title="什么是双链笔记"></a>什么是双链笔记</h3><blockquote><p>第一个开发出双链功能的 Roam research（后文简称Roam），就像一条鲶鱼，搅动了整个池塘，其他鱼（笔记类软件）同时活跃起来，现在双链几乎成了新一代笔记的基本要求。</p><p>Roam 的双向链接，既可以是大的页面（Page），也可以是更小的单元（Block）。 所谓双向链接，就是当你做笔记时，增加笔记A→笔记B的链接后，软件会自动加上B→A的链接。我们只要能找到这两个笔记中的任何一个，就可以找到另外一个。让笔记不再成为孤岛，增加了发现的可能性。</p><footer><strong>大辉</strong><cite><a href="https://zhuanlan.zhihu.com/p/348814980">双向链接笔记软件从入门到精通</a></cite></footer></blockquote><p>简而言之，通过双链类的笔记软件，我们可以将不同篇幅的笔记串联，例如我在A页面中提到了<em>Spark</em>这个框架，通过建立双链，将A页面和讲<em>Spark</em>的B页面关联(下图中形如超链接的词句便是双链)，这样子就可以通过点击迅速进行跳转；同时，通过B页面，我们可以找到所有与B页面建立双链的页面。不同的页面之间互相链接🔗，最终构成一个知识网络。</p><img src="https://qeasont.oss-cn-beijing.aliyuncs.com/uPic/pqgivj.png" alt="pqgivj"><h3 id="笔记的建立"><a href="#笔记的建立" class="headerlink" title="笔记的建立"></a>笔记的建立</h3><p>初次打开，Logseq会要求你建立一个图谱，图谱可以理解为笔记库。注意，在Logseq中并没有文件夹的概念，每一个页面又可以看作一个无序列表(由<em>块</em>组成的列表)，整体的构成从大到小为：<strong>图谱-页面-块</strong>；其中页面、块都可以被引用。同一图谱中的所有<em>笔记</em>像是漂浮在大海上的船只，<em>块</em>就像船只上大大小小的零件，零件彼此之间仅通过绳索(双链)连接。</p><p>完成图谱的建立后，我们便可以建立第一个页面，通过点击左下角的*+新建<em>按钮或者使用*<em>cmd+k</em></em>(windows中<strong>ctrl+k</strong>)快捷键快速创建一个新的页面。如上文所述，每一个块是都是无序列表(页面)的成员，通过<em>Tab</em>缩进，控制块与块之间的从属关系。<img src="https://qeasont.oss-cn-beijing.aliyuncs.com/uPic/7qlInO.png" alt="7qlInO"></p><p>当然，还有另一种创建页面的办法，便是通过[[]]双中括号建立双链，如果在中括号中输入已存在的页面名称，便可以直接建立导航到对应页面的双向链接；如果输入的名称不存在，则会自动创建同名的页面。<img src="https://qeasont.oss-cn-beijing.aliyuncs.com/uPic/pHcbwm.png" alt="pHcbwm"></p><img src="https://qeasont.oss-cn-beijing.aliyuncs.com/uPic/1Wx4fV.png" alt="1Wx4fV"><img src="https://qeasont.oss-cn-beijing.aliyuncs.com/uPic/BiNXkw.png" alt="BiNXkw"><p>可以看到，每个页面的下方会纪录所有引用该页面的页面信息，即<em>xx Linked Reference</em>；也可以通过点击右侧的漏斗符号对显示的内容进行筛选。</p><h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><p>Logseq兼容Markdown的语法，可以通过#控制块的字体大小，也可以通过*实现斜体或者加粗的效果。<img src="https://qeasont.oss-cn-beijing.aliyuncs.com/uPic/ByOdlB.png" alt="ByOdlB"></p><p>此外，通过三个反引号+对应的语言，再输入回车，可以自动触发代码块：<img src="https://qeasont.oss-cn-beijing.aliyuncs.com/uPic/pedCpm.png" alt="pedCpm"></p><h3 id="链接建立"><a href="#链接建立" class="headerlink" title="链接建立"></a>链接建立</h3><p>可以通过三种方式链接页面或块：</p><ol><li><strong>页面</strong><ol><li><strong>页面引用：</strong>/page reference 或 <code>\[\[\]\]</code>实现(上文已经提到)</li><li><strong>页面嵌入：</strong>/page embed 或 <code>{{embed \[\[\]\]}}</code>实现</li></ol></li><li><strong>块</strong><ol><li><strong>块引用：</strong> /block reference 或 <code>(())</code>实现</li><li><strong>块嵌入：</strong> /block embed 或 <code>{{embed (())}}</code>实现</li></ol></li><li><strong>tag引用</strong>：#实现</li></ol><p>相比与页面引用，页面嵌入是一种可视化的引用方式，实现效果如下：</p><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">{{embed [[3 sigma 原则]]}}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://qeasont.oss-cn-beijing.aliyuncs.com/uPic/image-20230930222249206.png" alt="image-20230930222249206"></p><p>页面嵌入将呈现被引用页面的所有内容，你可以直接在嵌入内容中进行编辑修改，这将同步到被引用页面；当然，你可以通过点击段落前的小三角形对内容进行折叠。</p><p>聪明的你应该可以触类旁通的想到，块引用和块嵌入的功能是和页面引入以及页面嵌入一一对应的，只是被引对象从页面变成了块：</p><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">{{embed ((Fint-tuning))}}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://qeasont.oss-cn-beijing.aliyuncs.com/uPic/image-20230930222644565.png" alt="image-20230930222644565"></p><p>大家应该在操作的过程中发现，基本上所有的交互都可以使用/+对应选项菜单实现：<img src="https://qeasont.oss-cn-beijing.aliyuncs.com/uPic/eIiMuJ.png" alt="eIiMuJ"></p><h3 id="下期预告"><a href="#下期预告" class="headerlink" title="下期预告"></a>下期预告</h3><p>第二期内容将介绍以下内容：</p><ol><li>模板Template的使用</li><li>DailyNote以及提醒事项功能</li><li>Logseq适合的使用场景分析</li></ol><p>QT也策划在之后陆续介绍<em>Logseq实用插件</em>，<em>Logseq隐藏使用技巧</em>，<em>多平台同步指南</em>等内容。</p><p>大家有什么想看的内容欢迎在blog下留言！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Share </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Logseq </tag>
+            
+            <tag> Workflow </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/posts/16107.html"/>
       <url>/posts/16107.html</url>
