@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Spark2.2.0 IDEA &amp;&amp; Maven源码编译</title>
+      <link href="/posts/53308.html"/>
+      <url>/posts/53308.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>最近在琢磨Spark2.2.0，通过扩展Spark SQL来支持多模态数据的管理和相似性查询，最终形成一个多模态数据库。在编译Spark源码的过程中遇到过一些奇奇怪怪的问题，希望能对后来的朋友有所帮助。</p><h3 id="问题一览"><a href="#问题一览" class="headerlink" title="问题一览"></a>问题一览</h3><ol><li><p>ERROR TransportRequestHandler</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">java.lang.NoSuchMethodError: java.nio.ByteBuffer.limit<span class="token punctuation">(</span>I<span class="token punctuation">)</span>Ljava/nio/ByteBuffer<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这个问题困扰了QT很久，网上也没有找到对应的解决方案。大多数的博客将这个问题描述为用于编译的Java版本和运行的Java版本不匹配，比如在我的项目中，使用Java1.8对Spark的源码进行编译，如果运行时使用更低版本的Java，就会出现因为无法找到limit方法而报错。但是在我的项目中并未存在这种情况，并且在本次报错之前已经多次成功编译并运行了Spark，因此排除这种可能。</p><p>在反复研究之后，我怀疑是之前为了启动Spark SQL Cli，修改了pom.xml文件，然后又使用IDEA的Maven插件-重新加载所有项目-为所有项目生成源代码并更新文件夹，以上操作让IDEA从云端库中自动获取了某些jar包，而这些包的Java编译版本并不是1.8，最终导致了这个无厘头的问题。</p><blockquote><p>解决方案：使用Maven声明周期中的clean，清除现有的缓存，重新通过compile编译，问题解决。</p></blockquote></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Spark </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>QT&#39;s Workflow--双链笔记Logseq</title>
       <link href="/posts/32266.html"/>
       <url>/posts/32266.html</url>
