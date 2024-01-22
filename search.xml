@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Git 误传Large files补救</title>
+      <link href="/posts/52195.html"/>
+      <url>/posts/52195.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="问题一览"><a href="#问题一览" class="headerlink" title="问题一览"></a>问题一览</h3><p>最近在使用Git的过程中，不小心未将一个大文件添加到<code>.gitignore</code>中，导致使用<code>git push</code>之后出现一下报错：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Large files detected.this exceeds GitHub's <span class="token function">file</span> size limit of <span class="token number">100.00</span> MBremote: error: GH001:xxxx<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>使用<code>git reset --soft HEAD^</code>和<code>git rm --cached xxx</code>之后均没有得到有效解决，怀疑是之前版本的commit中也包含这个压缩文件，但是当时这个文件还未超过100MB的限制，因此没有触发上传失败。</p><blockquote><p>解决方案：使用以下代码遍历历史所有的commit，使用rm删除该文件</p></blockquote><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> filter-branch <span class="token parameter variable">--force</span> --index-filter <span class="token string">"git rm -rf --cached --ignore-unmatch xxxx.zip"</span> --prune-empty --tag-name-filter <span class="token function">cat</span> -- <span class="token parameter variable">--all</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Spark2.2.0 IDEA &amp;&amp; Maven源码编译</title>
       <link href="/posts/53308.html"/>
       <url>/posts/53308.html</url>
