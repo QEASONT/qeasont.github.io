@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Google Scholar 搜索技巧</title>
+      <link href="/posts/64944.html"/>
+      <url>/posts/64944.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="问题一览"><a href="#问题一览" class="headerlink" title="问题一览"></a>问题一览</h3><p><code>Google Scholar</code>搜索的过程中，需要筛选多个来源的论文，可以使用以下的方式实现：</p><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">(source<span class="token punctuation">:</span>"Nature" OR source<span class="token punctuation">:</span>"Nature Methods" OR source<span class="token punctuation">:</span>"Nature Neuroscience" OR source<span class="token punctuation">:</span>"Nature Methods" )<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Tips </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git 误传Large files补救</title>
       <link href="/posts/52195.html"/>
       <url>/posts/52195.html</url>
